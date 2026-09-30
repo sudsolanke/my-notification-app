@@ -1,0 +1,13 @@
+<div>
+    <button (click)="showNotification()">Show Notification</button>
+</div>
+
+<app-notification></app-notification>
+
+@for(user of users(); track $index) {
+    <li class="truncate" [appTooltipDirective]="user.name + user.email"> {{user.name}} - {{user.email}}</li>
+}
+@empty {
+    <p>No users found.</p>
+}
+

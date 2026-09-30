@@ -1,0 +1,23 @@
+.notification-container {
+    position: fixed;
+    top:20px;
+    right: 20px;
+}
+.notification {
+    background-color: green;
+    color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(-20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.notification.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
