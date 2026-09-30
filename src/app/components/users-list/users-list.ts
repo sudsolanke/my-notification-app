@@ -5,7 +5,7 @@ import { Notification123 } from '../notification/notification';
 import { TooltipDirective } from '../../directives/tooltip-directive';
 
 @Component({
-  imports: [Notification123,TooltipDirective],
+  imports: [Notification123],
   selector: 'app-users-list',
   styleUrl: './users-list.scss',
   templateUrl: './users-list.html',

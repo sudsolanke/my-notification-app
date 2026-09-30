@@ -4,10 +4,32 @@
 
 <app-notification></app-notification>
 
+<table border="1" cellpadding="8" style="border-collapse: collapse">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+ 
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (user of users(); track user.id) {
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+
+      </tr>
+    }
+  </tbody>
+</table>
+<!-- 
 @for(user of users(); track $index) {
     <li class="truncate" [appTooltipDirective]="user.name + user.email"> {{user.name}} - {{user.email}}</li>
 }
 @empty {
     <p>No users found.</p>
-}
+} -->
 
